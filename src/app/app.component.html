@@ -1,0 +1,13 @@
+<div class="rutas">
+<a [routerLink]="['/sobre']" routerLinkActive="activas">Sobre Mi</a>
+<a [routerLink]="['/informacion']" routerLinkActive="activas">Información</a>
+<a [routerLink]="['/contacto']" routerLinkActive="activas">Contacto</a>
+</div>
+
+<router-outlet></router-outlet>
+<div class="botones">
+  <button (click)="onClick('sobre')">Sobre Mi</button>
+  <button (click)="onClick('informacion')">Información de la página</button>
+  <button (click)="onClick('contacto')">Contacta con nosotros</button>
+
+</div>
