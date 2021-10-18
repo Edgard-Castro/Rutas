@@ -8,12 +8,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProyectosComponent implements OnInit {
 
+
+  empleadoId: number | undefined;
+
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.activatedRoute.parent.params.subscribe(params => {
-      console.log(params.empleadoId);
-    });
+    this.activatedRoute.parent?.params.subscribe(params => {
+      this.empleadoId = params.empleadoId;
+    })
   }
 
 }
